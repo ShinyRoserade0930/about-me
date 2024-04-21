@@ -1,0 +1,27 @@
+query ($id: Int) {
+  Media(id: $id) {
+    title {
+      native
+      romaji
+    }
+    format
+    description
+    coverImage {
+      large
+    }
+    genres
+    averageScore
+    staff {
+      edges {
+        node {
+          name {
+            native
+            full
+          }
+        }
+        role
+      }
+    }
+    isAdult
+  }
+}

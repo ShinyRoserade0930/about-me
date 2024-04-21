@@ -1,0 +1,12 @@
+query ($userId: Int) {
+  MediaListCollection(userId: $userId, type: MANGA, status: COMPLETED) {
+    lists {
+      entries {
+        mediaId
+        score
+        notes
+      }
+      name
+    }
+  }
+}
